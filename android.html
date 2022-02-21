@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+	<title> hallo </title>
+</head>
+<style type="text/css">
+
+@media screen and (max-device-width: 400px) {
+	.column {
+	float: none;
+	width:auto;
+	}
+	
+	#sidebar {
+	display:none;
+	}
+}
+
+
+
+	.b{
+		background-image: url("222.jpg");
+			background-size: cover;
+	}
+	table{
+		overflow-x: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			text-align: center;	
+		}
+
+		h1 {
+			text-align: center;
+			font-family: "digital";
+			font-size: 100px;
+			font-weight: bold;
+			color: #DEB887;
+		}
+
+		.num{
+			font-family: "digital";
+			font-size: 49px;
+			font-style: bold;
+			font-weight: bold;
+			color: #FFE4C4;
+		}
+
+		.tr{
+			font-family: "digital";
+			text-align: center;
+			text-shadow: inherit;
+			font-size: 24px;
+			padding: 50px;
+			font-weight: bold;
+		color: #DEB887;	
+		}
+		.p{
+			top: 50%;
+			left: 50%;
+		}
+
+
+		@font-face {
+  		src: url('digital-7.ttf');
+  		font-family:'digital';
+  		font-style: normal;
+		}
+		
+
+</style>
+<body class="b">
+	<!-- <body class="p"> -->
+	<!-- <form class="b"> 
+		<h1 class="tr">Count Down</h1> -->
+		<table width="398">
+			<tr class="num">
+				<td id="d"></td>
+				<td id="h"></td>
+				<td id="m"></td>
+				<td id="s"></td>
+			</tr>
+
+  <tr style="height:25px">
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+			<tr class="tr">
+				<td> Day </td>
+				<td> Hour </td>
+				<td> Minute </td>
+				<td> Second </td>
+			</tr>
+			<tr><h1>Egyptian army</h1></tr>
+		</table>
+		
+	<!-- </form> "" -->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 21, 2022 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  // + minutes + "m " + seconds + "s ";
+    
+
+  document.getElementById("d").innerHTML = days < 10 ? "0" + days : days;
+  document.getElementById("h").innerHTML = hours < 10 ? "0" + hours : hours;
+  document.getElementById("m").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+  document.getElementById("s").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+</body>
+</html>
